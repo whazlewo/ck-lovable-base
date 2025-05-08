@@ -1,25 +1,27 @@
+import { PrimaryButton } from "@workday/canvas-kit-react/button";
+import { Flex } from "@workday/canvas-kit-react/layout";
+import { plusIcon, relatedActionsVerticalIcon, caretDownIcon } from "@workday/canvas-system-icons-web";
+import { createStyles } from "@workday/canvas-kit-styling";
+import { system } from "@workday/canvas-tokens-web";
 
-import Navbar from "@/components/layout/Navbar";
-import Container from "@/components/ui/Container";
+const parentContainerStyles = createStyles({
+  gap: system.space.x4,
+  padding: system.space.x4,
+});
 
-const Index = () => {
+const CKTest = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-1 flex items-center justify-center">
-        <Container>
-          <div className="max-w-2xl mx-auto text-center space-y-6 py-16">
-            <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-              Welcome to Your New Project
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              This is a clean slate for you to build something amazing.
-            </p>
-          </div>
-        </Container>
-      </main>
-    </div>
+    <Flex cs={parentContainerStyles}>
+      <PrimaryButton>Primary</PrimaryButton>
+      <PrimaryButton icon={plusIcon} iconPosition="start">
+        Primary
+      </PrimaryButton>
+      <PrimaryButton icon={caretDownIcon} iconPosition="end">
+        Primary
+      </PrimaryButton>
+      <PrimaryButton aria-label="Related Actions" icon={relatedActionsVerticalIcon} />
+    </Flex>
   );
 };
 
-export default Index;
+export default CKTest;
