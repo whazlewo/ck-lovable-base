@@ -1,6 +1,6 @@
-import { PrimaryButton, SecondaryButton } from "@workday/canvas-kit-react/button";
-import { Dialog } from "@workday/canvas-kit-react/dialog";
-import { Flex } from "@workday/canvas-kit-react/layout";
+import { PrimaryButton, SecondaryButton } from "@workday/canvas-kit-react-button";
+import { Dialog } from "@workday/canvas-kit-react-dialog";
+import { Flex } from "@workday/canvas-kit-react-layout";
 import { createStyles } from "@workday/canvas-kit-styling";
 import { system } from "@workday/canvas-tokens-web";
 import { useState } from "react";
